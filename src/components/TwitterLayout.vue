@@ -53,7 +53,7 @@ export default defineComponent({
       return items[Math.floor(Math.random() * items.length)];
     },
     getFile() {
-      console.log("b");
+      console.log("");
     },
     closeMessageBox: function(){
       this.createTweet = false
@@ -72,6 +72,7 @@ export default defineComponent({
 <template>
   <div class="fixed w-full">
     <div class="max-w-[1400px] flex mx-auto">
+      <!--Sidebar-->
       <div
         class="hidden md:block lg:w-3/12 w-[60px] h-[100vh] max-w-[350px] lg:px-4 lg:mx-auto mx-5 mt-5"
       >
@@ -119,14 +120,16 @@ export default defineComponent({
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="absolute top-0 z-0 h-full overflow-auto scrollbar-hide">
+        <div class="absolute top-0 z-0 h-full overflow-auto scrollbar-hide">
         <div class="mt-[126px]"></div>
         <slot />
         <div class="pb-4"></div>
       </div>
+      </div>
 
+      <!---->
+      <!--Trending-->
       <div
         class="lg:block hidden lg:w-4/12 h-screen border-1 border-gray-800 pl-4 mt-2"
       >
@@ -223,13 +226,14 @@ export default defineComponent({
       </div>
     </div>
   </div>
-
+  
+  <!--Overplay section-->
   <div
     v-if="createTweet"
     id="OverplaySection"
     class="fixed top-0 left-0 w-full h-screen bg-black md:bg-gray-400 md:bg-opacity-30"
   >
-    <div class="md:max-w-2xl md:mx-auto md:mt-10 md:rounded-xl bg-black">
+    <div class="md:max-w-xl md:mx-auto md:mt-[150px] md:rounded-xl bg-black">
       <div
         class="flex items-center justify-between md:inline-block p-2 m-2 rounded-full cursor-pointer"
       >
