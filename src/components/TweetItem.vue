@@ -23,19 +23,22 @@ export default defineComponent({
     tweet: Object,
   },
   components: {
-        DotsHorizontal
+        DotsHorizontal,
+        MessageOutline,
+        Sync,
+        HeartOutline,
+        ChartBar
+
 },
 });
 </script>
 
 <template>
-  <div class="min-w-[60px]">
+  <div v-if="tweet?.avatar_img" class="min-w-[60px]">
     <img
-      src="https://images.unsplash.com/photo-1670272498425-e13ce4fcf5f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+      :src="tweet.avatar_img"
       alt="tweet_img"
-      class="rounded-full m-2 mt-3"
-      width="50"
-      height="50"
+      class="w-[60px] h-[60px] rounded-full m-2 mt-3"
     />
   </div>
 
@@ -46,6 +49,7 @@ export default defineComponent({
         <span class="font-[300] text-[15px] text-gray-500 pl-2">{{
           tweet?.handle
         }}</span>
+        <span class="font-[300] text-[15px] text-gray-500 pl-2">{{tweet?.time}}</span>
       </div>
 
       <div class="hover:bg-gray-800 rounded-full cursor-pointer ralative">
@@ -56,17 +60,38 @@ export default defineComponent({
     </div>
 
     <div class="pb-3">{{ tweet?.tweet }}</div>
-    <div v-if="tweet?.file">
+    <div v-if="tweet?.img">
         <div v-if="!tweet?.is_Video" class="rounded-xl">
             <img 
-            :src="tweet.file" 
+            :src="tweet.img" 
             alt="img"
             class="mt-2 object-fill rounded-xl w-full"
             >
         </div>
         <div v-else>
-            <video :src="tweet.file" class="rounded-xl" controls></video>
+            <video class="h-[50%] rounded-xl" controls>
+              <source src="../assets/video/amazon.mp4" type="video/mp4">
+            </video>
         </div>
+    </div>
+
+    <div class="flex items-center justify-between mt-4 w-4/5">
+      <div class="flex">
+          <MessageOutline fillColor="#5e5c5c" :size="18" />
+          <span class="text-xs font-extrabold text-[#5e5c5c] ml-3">{{ tweet?.comment }}</span> 
+      </div>
+      <div class="flex">
+          <Sync fillColor="#5e5c5c" :size="18" />
+          <span class="text-xs font-extrabold text-[#5e5c5c] ml-3">{{ tweet?.retweets }}</span> 
+      </div>
+      <div class="flex">
+          <HeartOutline fillColor="#5e5c5c" :size="18" />
+          <span class="text-xs font-extrabold text-[#5e5c5c] ml-3">{{ tweet?.likes }}</span> 
+      </div>
+      <div class="flex">
+          <ChartBar fillColor="#5e5c5c" :size="18" />
+          <span class="text-xs font-extrabold text-[#5e5c5c] ml-3">{{ tweet?.analytics }}</span> 
+      </div>
     </div>
   </div>
 </template>

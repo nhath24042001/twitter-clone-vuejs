@@ -18,8 +18,8 @@ export default defineComponent({
   data() {
     return {
       images: [
-        "https://images.unsplash.com/photo-1674574124649-778f9afc0e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-        "https://images.unsplash.com/photo-1674574124349-0928f4b2bce3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+        "https://kenh14cdn.com/thumb_w/800/pr/2023/photo1676601387596-1676601388078789660078-63812233762328.jpg",
+        "https://channel.mediacdn.vn/428462621602512896/2023/2/17/photo-1-16766013064472095955653.jpg",
       ],
       imageItem: [
         "https://plus.unsplash.com/premium_photo-1674638478472-4ef31f335ccb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
@@ -121,7 +121,7 @@ export default defineComponent({
           </div>
         </div>
 
-        <div class="absolute top-0 z-0 h-full overflow-auto scrollbar-hide">
+        <div class="absolute top-0 z-0 h-full overflow-auto scrollbar-hidden">
         <div class="mt-[126px]"></div>
         <slot />
         <div class="pb-4"></div>
@@ -155,10 +155,10 @@ export default defineComponent({
             <div class="flex p-3 justify-between h-[80px] py-3">
               <div>
                 <div class="text-[14px] text-gray-400">
-                  Tennis Tournament LIVE
+                  NBA All-Star 2023
                 </div>
                 <div class="w-full text-white font-extrabold mb-6 text-[17px]">
-                  Vietnam Open 2023
+                  Cuộc chiến giữa các vì sao trong NBA All-Star 2023
                 </div>
               </div>
               <p v-if="selectedImage">
@@ -178,12 +178,12 @@ export default defineComponent({
             <div class="flex p-3 justify-between">
               <div>
                 <div class="text-[14px] text-gray-400">
-                  Tennis Tournament LIVE
+                  Trending in Vietnam
                 </div>
                 <div class="w-full text-white font-extrabold text-[17px]">
-                  Vietnam Open 2023
+                  #슈퍼킹카우베이비_화니짱_생축
                 </div>
-                <div class="text-[14px] text-gray-400">5.923 Tweets</div>
+                <div class="text-[14px] text-gray-400">24.2K Tweets</div>
               </div>
               <DotsHorizontal fillColor="#5e5c5c" :size="25" />
             </div>
@@ -195,12 +195,12 @@ export default defineComponent({
             <div class="flex p-3 justify-between">
               <div>
                 <div class="text-[14px] text-gray-400">
-                  Tennis Tournament LIVE
+                  Fashion Week
                 </div>
                 <div class="w-full text-white font-extrabold text-[17px]">
-                  Vietnam Open 2023
+                  Womenswear Spring-Summer 2023
                 </div>
-                <div class="text-[14px] text-gray-400">5.923 Tweets</div>
+                <div class="text-[14px] text-gray-400">2.1M Tweets</div>
               </div>
               <DotsHorizontal fillColor="#5e5c5c" :size="25" />
             </div>
@@ -212,12 +212,12 @@ export default defineComponent({
             <div class="flex p-3 justify-between">
               <div>
                 <div class="text-[14px] text-gray-400">
-                  Tennis Tournament LIVE
+                  Trending in Vietnam
                 </div>
                 <div class="w-full text-white font-extrabold text-[17px]">
-                  Vietnam Open 2023
+                  #bsumbody
                 </div>
-                <div class="text-[14px] text-gray-400">5.923 Tweets</div>
+                <div class="text-[14px] text-gray-400">4.821 Tweets</div>
               </div>
               <DotsHorizontal fillColor="#5e5c5c" :size="25" />
             </div>
