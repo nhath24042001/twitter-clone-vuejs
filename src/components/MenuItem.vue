@@ -12,38 +12,46 @@ export default defineComponent({
     Pound,
     BellOutline,
     EmailOutline,
-    AccountOutline
+    AccountOutline,
   },
 });
 </script>
 
 <template>
   <div class="">
+    <RouterLink to="/">
     <div
       class="w-full lg:inline-block flex justify-center items-center hover:bg-gray-900 p-4 lg-pr-6 rounded-full cursor-pointer transition duration-300 ease-in-out mt-5"
     >
+
       <div class="flex items-center">
         <Home fillColor="#FFFFFF" :size="32" />
         <span
-          class="lg:block hidden text-white font-extrabold text-[18px] pl-4 mt-0.5"
+        class="lg:block hidden text-white font-extrabold text-[18px] pl-4 mt-0.5"
         >
-          Home
-        </span>
-      </div>
+        Home
+      </span>
     </div>
-    <div
+  </div>
+</RouterLink>
+
+    <RouterLink to='/explore'>
+
+      <div
       class="w-full lg:inline-block flex justify-center items-center hover:bg-gray-900 p-4 px-4 lg-pr-6 rounded-full cursor-pointer transition duration-300 ease-in-out mt-5"
-    >
+      >
       <div class="flex items-center">
         <Pound fillColor="#FFFFFF" :size="32" />
         <span
-          class="lg:block hidden text-white font-bold text-[18px] pl-4 mt-0.5"
+        class="lg:block hidden text-white font-bold text-[18px] pl-4 mt-0.5"
         >
-          Explore
-        </span>
-      </div>
+        Explore
+      </span>
     </div>
-    <div
+  </div>
+  </RouterLink>
+  
+  <div
       class="w-full lg:inline-block flex justify-center items-center hover:bg-gray-900 p-4 px-4 lg-pr-6 rounded-full cursor-pointer transition duration-300 ease-in-out mt-5"
     >
       <div class="flex items-center">
@@ -63,21 +71,23 @@ export default defineComponent({
         <span
           class="lg:block hidden text-white font-extrabold text-[18px] pl-4 mt-0.5"
         >
-        Messages
+          Messages
         </span>
       </div>
     </div>
-    <div
-      class="w-full lg:inline-block flex justify-center items-center hover:bg-gray-900 p-4 px-4 lg-pr-6 rounded-full cursor-pointer transition duration-300 ease-in-out mt-5"
-    >
-      <div class="flex items-center">
-        <AccountOutline fillColor="#FFFFFF" :size="32" />
-        <span
-          class="lg:block hidden text-white font-extrabold text-[18px] pl-4 mt-0.5"
-        >
-          Profile
-        </span>
+    <RouterLink to="/profile">
+      <div
+        class="w-full lg:inline-block flex justify-center items-center hover:bg-gray-900 p-4 px-4 lg-pr-6 rounded-full cursor-pointer transition duration-300 ease-in-out mt-5"
+      >
+        <div class="flex items-center">
+          <AccountOutline fillColor="#FFFFFF" :size="32" />
+          <span
+            class="lg:block hidden text-white font-extrabold text-[18px] pl-4 mt-0.5"
+          >
+            Profile
+          </span>
+        </div>
       </div>
-    </div>
+    </RouterLink>
   </div>
 </template>

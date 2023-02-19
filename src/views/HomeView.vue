@@ -1,13 +1,11 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue";
 import TwitterLayout from "@/components/TwitterLayout.vue";
 import TweetItem from "@/components/TweetItem.vue";
 
 export default defineComponent({
   name: "HomeView",
   components: {
-    HelloWorld,
     TwitterLayout,
     TweetItem,
   },
@@ -16,7 +14,6 @@ export default defineComponent({
 
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
     <TwitterLayout>
       <div class="text-white">
         <div class="flex">
