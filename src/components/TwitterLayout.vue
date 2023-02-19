@@ -74,7 +74,7 @@ export default defineComponent({
     <div class="max-w-[1400px] flex mx-auto">
       <!--Sidebar-->
       <div
-        class="hidden md:block lg:w-3/12 w-[60px] h-[100vh] max-w-[350px] lg:px-4 lg:mx-auto mx-5 mt-5"
+        class="hidden sm:block lg:w-3/12 w-[60px] h-[100vh] max-w-[350px] lg:px-4 lg:mx-auto md:mx-5 mt-5"
       >
         <div class="p-2 px-3 mb-4">
           <Twitter fillColor="#FFFFFF" :size="37" />
@@ -93,7 +93,7 @@ export default defineComponent({
       </div>
 
       <div
-        class="lg:w-7/12 w-11/12 border-x border-gray-800 relative text-white"
+        class="lg:w-7/12 w-11/12 border-gray-800 relative text-white"
       >
         <div
           class="bg-black bg-opacity-50 backdrop-blur-md z-10 absolute w-full"
@@ -122,7 +122,8 @@ export default defineComponent({
         </div>
 
         <div class="absolute top-0 z-0 h-full overflow-auto scrollbar-hidden">
-        <div class="mt-[126px]"></div>
+        <div class="mt-[126px]">
+        </div>
         <slot />
         <div class="pb-4"></div>
       </div>
@@ -131,7 +132,7 @@ export default defineComponent({
       <!---->
       <!--Trending-->
       <div
-        class="lg:block hidden lg:w-4/12 h-screen border-1 border-gray-800 pl-4 mt-2"
+        class="block lg:w-4/12 h-screen border-1 border-gray-800 pl-4 mt-2"
       >
         <div
           class="w-full p-1 mt-2 px-4 lg:flex items-center rounded-full hidden bg-[#212327]"

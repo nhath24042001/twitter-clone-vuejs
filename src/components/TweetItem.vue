@@ -65,30 +65,30 @@ export default defineComponent({
             <img 
             :src="tweet.img" 
             alt="img"
-            class="mt-2 object-fill rounded-xl w-full"
+            class="mt-2 object-fill rounded-xl w-[85%] lg:w-full"
             >
         </div>
         <div v-else>
-            <video class="h-[50%] rounded-xl" controls>
+            <video class="h-[50%] rounded-xl w-[85%] lg:w-full" controls>
               <source src="../assets/video/amazon.mp4" type="video/mp4">
             </video>
         </div>
     </div>
 
-    <div class="flex items-center justify-between mt-4 w-4/5">
-      <div class="flex">
+    <div class="flex items-center justify-between mt-4 w-4/5 cursor-pointer">
+      <div class="flex hover:bg-gray-300 p-2 rounded-full justify-center items-center">
           <MessageOutline fillColor="#5e5c5c" :size="18" />
           <span class="text-xs font-extrabold text-[#5e5c5c] ml-3">{{ tweet?.comment }}</span> 
       </div>
-      <div class="flex">
+      <div class="flex hover:bg-gray-300 p-2 rounded-full justify-center items-center">
           <Sync fillColor="#5e5c5c" :size="18" />
           <span class="text-xs font-extrabold text-[#5e5c5c] ml-3">{{ tweet?.retweets }}</span> 
       </div>
-      <div class="flex">
+      <div class="flex hover:bg-gray-300 p-2 rounded-full justify-center items-center">
           <HeartOutline fillColor="#5e5c5c" :size="18" />
           <span class="text-xs font-extrabold text-[#5e5c5c] ml-3">{{ tweet?.likes }}</span> 
       </div>
-      <div class="flex">
+      <div class="flex hover:bg-gray-300 p-2 rounded-full justify-center items-center">
           <ChartBar fillColor="#5e5c5c" :size="18" />
           <span class="text-xs font-extrabold text-[#5e5c5c] ml-3">{{ tweet?.analytics }}</span> 
       </div>

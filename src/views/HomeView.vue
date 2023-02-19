@@ -159,7 +159,6 @@ export default defineComponent({
         <div class="border-b border-b-gray-800 mt-2"></div>
       </div>
 
-      <!-- <h1>Welcome</h1> -->
     </TwitterLayout>
   </div>
 </template>
