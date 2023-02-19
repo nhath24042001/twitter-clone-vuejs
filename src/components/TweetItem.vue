@@ -59,7 +59,7 @@ export default defineComponent({
       </div>
     </div>
 
-    <div class="pb-3">{{ tweet?.tweet }}</div>
+    <div class="pb-3 w-[85%]">{{ tweet?.tweet }}</div>
     <div v-if="tweet?.img">
         <div v-if="!tweet?.is_Video" class="rounded-xl">
             <img 
